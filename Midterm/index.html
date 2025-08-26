@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder - Vanilla JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍳 Recipe Finder</h1>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="e.g., Chicken, Pasta, Thai...">
+                <button type="submit">Search</button>
+            </form>
+        </header>
+        <main id="results-container">
+            <div id="results-grid" class="results-grid">
+                <p class="placeholder">Type something in the search box to find recipes!</p>
+            </div>
+        </main>
+                        <!-- Meal Details Section -->
+<section id="meal-details-section" class="meal-details hidden">
+    <div class="container">
+        <!-- Back Button -->
+        <button id="back-to-search-btn" class="back-button">
+            ← กลับไปค้นหาอาหาร
+        </button>
+        
+        <!-- Loading State -->
+        <div id="details-loading" class="loading-message hidden">
+            กำลังโหลดรายละเอียดอาหาร...
+        </div>
+        
+        <!-- Error State -->
+        <div id="details-error" class="error-message hidden">
+            เกิดข้อผิดพลาด ไม่สามารถโหลดข้อมูลได้
+        </div>
+        
+        <!-- Meal Details Content -->
+        <div id="meal-details-content" class="meal-details-content hidden">
+            <!-- เนื้อหารายละเอียดจะถูกสร้างด้วย JavaScript -->
+        </div>
+    </div>
+</section>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
