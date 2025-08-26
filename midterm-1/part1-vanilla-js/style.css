@@ -1,0 +1,179 @@
+/* (ไฟล์ CSS ที่สไตล์หน้าเว็บให้สวยงามทั้งหมดจะอยู่ในนี้) */
+body { 
+    font-family: sans-serif; 
+    background-color: #f0f2f5; 
+    margin: 0; 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+}
+
+header { 
+    text-align: center; 
+    margin-bottom: 2rem; 
+}
+
+h1 { 
+    color: #333; 
+}
+
+#search-form { 
+    display: flex; 
+    max-width: 500px; 
+    margin: 1rem auto; 
+}
+
+#search-input { 
+    flex-grow: 1; 
+    padding: 0.75rem; 
+    border: 1px solid #ccc; 
+    border-radius: 4px 0 0 4px; 
+    font-size: 1rem; 
+}
+
+#search-form button { 
+    padding: 0.75rem 1.5rem; 
+    border: none; 
+    background-color: #007bff; 
+    color: white; 
+    border-radius: 0 4px 4px 0; 
+    cursor: pointer; 
+}
+
+.results-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 1.5rem; 
+}
+.meal-card { 
+    background: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+}
+
+.meal-card img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.meal-card h3 { 
+    padding: 1rem; 
+    font-size: 1.1rem; 
+    margin: 0; 
+}
+
+.placeholder, .status-message { 
+    color: #666; 
+    text-align: center; 
+    grid-column: 1 / -1; 
+}
+
+/* Meal Details Styles */
+.meal-details {
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.back-button {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background: #545b62;
+}
+
+.meal-details-content {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.meal-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.meal-header img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.meal-info h1 {
+    color: var(--primary-color, #2c3e50);
+    margin-bottom: 1rem;
+}
+
+.ingredients-section, .instructions-section {
+    margin: 2rem 0;
+}
+
+.ingredients-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border-left: 3px solid #007bff;
+}
+
+.instructions-text {
+    line-height: 1.8;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    white-space: pre-line;
+}
+
+.video-link {
+    display: inline-block;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.video-link:hover {
+    background: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .meal-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .ingredients-list {
+        grid-template-columns: 1fr;
+    }
+}
